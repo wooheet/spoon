@@ -57,8 +57,8 @@ Profile
 ### <a name="chapter-4"></a>Strategy 
 ```` 
 - DDD(Domain Driven Design) 적용
-- User, User Role 도메인으로 분리 / JPA fetch join 적용
-- Following, Follower 도메인 
+- User 
+    - User Role, User fans, User Blocks 도메인으로 분리 / JPA fetch join 적용 
 - API 기능명세에서 제시한 기능 구현
 - 로그인 구현 ( 로그인 후 JWT 토큰 제공 ) 
 - Jwt 적용  
