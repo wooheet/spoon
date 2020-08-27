@@ -52,7 +52,7 @@ public class UserController {
 
     @ApiOperation(value = "User 조회", notes = "User의 프로필을 조회")
     @GetMapping(value = "/user/{id}")
-    public CommonResult findDj(@PathVariable long id) {
+    public CommonResult findUser(@PathVariable long id) {
         UserDto.Response response;
         User user = userService.getAuthenticationUser();
 

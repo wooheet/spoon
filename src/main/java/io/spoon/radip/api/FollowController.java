@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
-@Api(tags = {"3. Follow"})
+@Api(tags = {"2. Follow"})
 @RequestMapping(value = "/v1")
 public class FollowController {
 
@@ -32,6 +32,7 @@ public class FollowController {
     public CommonResult following(@ApiParam(value = "following", required = true) @RequestBody FollowDto.Following request) {
         User me = userService.getAuthenticationUser();
         followService.following(me, request.getUserId());
+
         return responseService.getSuccessResult();
     }
 

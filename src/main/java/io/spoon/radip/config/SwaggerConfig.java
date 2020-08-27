@@ -16,7 +16,7 @@ public class SwaggerConfig {
     @Bean
     public Docket swaggerApi() {
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(swaggerInfo()).select()
-                .apis(RequestHandlerSelectors.basePackage("io.zigzab/vacation"))
+                .apis(RequestHandlerSelectors.basePackage("io.spoon"))
                 .paths(PathSelectors.ant("/v1/**"))
                 .build()
                 .useDefaultResponseMessages(false);
@@ -24,7 +24,7 @@ public class SwaggerConfig {
 
     private ApiInfo swaggerInfo() {
         return new ApiInfoBuilder().title("Spring API Documentation")
-                .description("Zigzag task")
-                .license("haewon").licenseUrl("https://github.com/croquiscom-recruit/backend_wooheet").version("1").build();
+                .description("Spoon task")
+                .license("haewon").licenseUrl("https://github.com/wooheet/spoon").version("1").build();
     }
 }
